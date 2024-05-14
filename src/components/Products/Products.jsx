@@ -40,7 +40,7 @@ const ProductsData = [
         aosDelay: "0"
     },
     {
-        id: 4,
+        id: 5,
         img: Img3,
         title: "Women Northen",
         rating: 3.0,
@@ -79,6 +79,12 @@ const Products = () => {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                    {/* view all button */}
+                    <div data-aos="fade-up" className='flex justify-center '>
+                        <button className='text-center mt-10 cursor-pointer bg-primary text-white py-1 px-3 rounded-md'>
+                            View All
+                        </button>
                     </div>
                 </div>
             </div>
