@@ -17,7 +17,7 @@ const App = () => {
   const handleOrderPopup = ()=>{
     setOrderPopup(!orderPopup)
   }
-
+// AOS is used for animation purpose... like cool effect
   React.useEffect(()=>{
     AOS.init({
       offset: 100,
@@ -30,16 +30,16 @@ const App = () => {
 
   return (
     <div className='bg-white dark:bg-gray-900 dark:text-white duration-200'>
-      <Navbar />
-      <Hero />
+      <Navbar handleOrderPopup={handleOrderPopup} />
+      <Hero handleOrderPopup={handleOrderPopup} />
       <Products />
-      <TopProducts />
+      <TopProducts handleOrderPopup={handleOrderPopup} />
       <Banner />
       <Subscribe />
       <Products />
       <Testimonials />
       <Footer />
-      <Popup />
+      <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
     </div>
   )
 }
